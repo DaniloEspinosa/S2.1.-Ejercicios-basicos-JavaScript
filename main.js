@@ -144,40 +144,70 @@ parOImpar(arrayNumeros);
 /* Ejercicio 1
 Callback básico: Escribe una función llamada procesar que acepte dos parámetros: un número y una función de callback. La función procesar debe invocar la función de callback, pasando el número como parámetro.*/
 
-
-function procesar(num, fn) {
-    fn(num)
+function procesar(num, callback) {
+  callback(num);
 }
 
-function callback(numero) {
-    console.log(`El numero pasado como argumento es el ${numero}`)
+function parametro(numero) {
+  console.log(`El numero pasado como argumento es el ${numero}`);
 }
 
-procesar(5, callback)
+procesar(5, parametro);
 
 /* Ejercicio 2
 Callbacks con operaciones matemáticas: Escribe una función calculadora que acepte tres parámetros: dos números y una función de callback. La función calculadora debe invocar la función de callback con los dos números como parámetros. Luego, llama calculadora con una función que realice la suma de los dos números.*/
 
-
 function calculadora(num1, num2, fn) {
-    fn(num1, num2)
+  fn(num1, num2);
 }
 
 function suma(a, b) {
-    console.log(a + b)
+  console.log(a + b);
 }
 
-calculadora(14, 8, suma)
-calculadora(10, 5, suma)
+calculadora(14, 8, suma);
+calculadora(10, 5, suma);
 
 // Nivel 2
 /* Ejercicio 3
 Uso de callbacks en funciones asíncronas: Escribe una función esperarISaludar que acepte dos parámetros: un nombre y una función de callback. La función debe esperar 2 segundos y entonces invocar la función de callback, pasando el nombre como parámetro.*/
 
+const esperarISaludar = (nombre, callback) => {
+  setTimeout(() => {
+    callback(nombre);
+  }, 2000);
+};
+
+function saludo(name) {
+  console.log(`Luego de 2 segundos te digo hola ${name}`);
+}
+
+esperarISaludar("Juan", saludo);
+
 /* Ejercicio 4
 Callbacks con arrays: Escribe una función procesarElements que acepte dos parámetros: un array y una función de callback. La función procesarElements debe invocar la función de callback por cada elemento del array.*/
 
+const arrayElementos = ["Hola", "como", "estas"];
 
+const procesarForEach = (array, callback) => {
+  array.forEach((item) => {
+    callback(item);
+  });
+};
+
+const procesarFor = (array, callback) => {
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i]);
+  }
+};
+
+function elementos(elemento) {
+  console.log(elemento);
+}
+console.log("Resuelto con forEach");
+procesarForEach(arrayElementos, elementos);
+console.log("Resuelto con for");
+procesarFor(arrayElementos, elementos);
 
 // Nivel 3
 /* Ejercicio 5
