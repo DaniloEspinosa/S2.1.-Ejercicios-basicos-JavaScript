@@ -29,7 +29,7 @@ person1.greet();
 /*Ejercicio 4
 Función de flecha dentro de un loop: Crea una función llamada printNumbers que acepte un array de números y utilice un loop for para imprimir cada número en la consola utilizando una función de flecha.*/
 
-const arrayNumeros = [1, 4, 6, 8, 23, 2, 12];
+const arrayNumeros = [1, 4, 6, 8, 23, 2, 12, -9, -7, -8];
 
 const printNumbers = (array) => {
   console.log("Desde aqui el bucle foreach");
@@ -120,12 +120,19 @@ const encontrarMaximo = (a, b, c) => {
     : `El valor maximo es ${c}`;
 };
 
-console.log(encontrarMaximo(1,2,3))
-console.log(encontrarMaximo(3,2,1))
-console.log(encontrarMaximo(1,3,2))
-console.log(encontrarMaximo(10,10,10))
-console.log(encontrarMaximo(-10,-6,-4))
+console.log(encontrarMaximo(1, 2, 3));
+console.log(encontrarMaximo(3, 2, 1));
+console.log(encontrarMaximo(1, 3, 2));
+console.log(encontrarMaximo(10, 10, 10));
+console.log(encontrarMaximo(-10, -6, -4));
 
 // Nivel 3
 /* Ejercicio 4
 Operador ternario dentro de un bucle: Escribe una función parOImpar que acepte un array de números y utilice un bucle para recorrer el array Dentro del bucle, utiliza el operador ternario para determinar si cada número es par o impar.*/
+
+const parOImpar = (array) => {
+  array.forEach((item) => {
+    console.log(item % 2 ? `${item} es impar` : `${item} es par`);
+  });
+};
+parOImpar(arrayNumeros);
