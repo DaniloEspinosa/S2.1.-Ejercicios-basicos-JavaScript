@@ -47,3 +47,15 @@ const printNumbers2 = (array) => {
 
 printNumbers(arrayNumeros);
 printNumbers2(arrayNumeros);
+
+// Nivel 3
+/*Ejercicio 5
+Función de flecha con 'setTimeout': Crea una función de flecha que imprima un mensaje en la consola después de esperar 3 segundos.*/
+
+const despuesDe3Segundos = () => {
+    setTimeout(() => {
+        console.log("Han pasado 3 segundos desde la ejecucion de la funcion 'despuesDe3Segundos()'")
+    }, 3000)
+}
+
+despuesDe3Segundos()
