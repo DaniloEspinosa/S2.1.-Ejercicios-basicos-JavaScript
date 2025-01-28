@@ -53,9 +53,49 @@ printNumbers2(arrayNumeros);
 Función de flecha con 'setTimeout': Crea una función de flecha que imprima un mensaje en la consola después de esperar 3 segundos.*/
 
 const despuesDe3Segundos = () => {
-    setTimeout(() => {
-        console.log("Han pasado 3 segundos desde la ejecucion de la funcion 'despuesDe3Segundos()'")
-    }, 3000)
-}
+  setTimeout(() => {
+    console.log(
+      "Han pasado 3 segundos desde la ejecucion de la funcion 'despuesDe3Segundos()'"
+    );
+  }, 3000);
+};
 
-despuesDe3Segundos()
+despuesDe3Segundos();
+
+// ---------- Ejercicio 1.2: Operador ternario --------------------------------------------------
+
+// Nivel 1
+/*Ejercicio 1
+Operador ternario básico: Escribe una función puedeConducir que acepte la edad como parámetro y utilice el operador ternario para determinar si el usuario puede conducir. Si la edad es 18 o más, debe devolver 'Puedes conducir'. Si no, debe devolver 'No puedes conducir'.*/
+
+const puedeConducir = (edad) =>
+  edad >= 18 ? "Puedes conducir" : "No puedes conducir";
+
+console.log(puedeConducir(5));
+console.log(puedeConducir(18));
+console.log(puedeConducir(17));
+console.log(puedeConducir(20));
+
+/*Ejercicio 2
+Uso con operadores de comparación: Escribe una expresión que utilice el operador ternario para determinar cuál de los dos números dados (num1 y num2) es mayor, devuelve 'num1 es mayor' Si no, devuelve '. num2 es mayor'.*/
+
+const comparacionNumeros = (num1, num2) => {
+    return  num1 === num2
+    ? "num1 y num2 son iguales"
+    : num1 > num2
+    ? "num1 es mayor"
+    : "num2 es mayor";
+};
+console.log(comparacionNumeros(1,2))
+console.log(comparacionNumeros(10,2))
+console.log(comparacionNumeros(100,100))
+
+// Nivel 2
+/* Ejercicio 3
+Uso enlazado de operadores ternarios: Escribe una expresión que utilice enlaces de operadores ternarios para determinar si un número es positivo, negativo o cero.
+
+Operador ternario con funciones: Crea una función encontrarMaximo que acepte tres parámetros (a, b, c) y utilice el operador ternario para determinar el valor máximo.*/
+
+// Nivel 3
+/* Ejercicio 4
+Operador ternario dentro de un bucle: Escribe una función parOImpar que acepte un array de números y utilice un bucle para recorrer el array Dentro del bucle, utiliza el operador ternario para determinar si cada número es par o impar.*/
