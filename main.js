@@ -108,7 +108,8 @@ console.log(positivoNegativoOCero(-0.3));
 console.log(positivoNegativoOCero(10));
 console.log(positivoNegativoOCero(-5));
 
-/*Operador ternario con funciones: Crea una función encontrarMaximo que acepte tres parámetros (a, b, c) y utilice el operador ternario para determinar el valor máximo.*/
+/*Operador ternario con funciones:
+Crea una función encontrarMaximo que acepte tres parámetros (a, b, c) y utilice el operador ternario para determinar el valor máximo.*/
 
 const encontrarMaximo = (a, b, c) => {
   return a > b
@@ -136,3 +137,48 @@ const parOImpar = (array) => {
   });
 };
 parOImpar(arrayNumeros);
+
+// ---------- Ejercicio 1.3: Callbacks --------------------------------------------------
+
+// Nivel 1
+/* Ejercicio 1
+Callback básico: Escribe una función llamada procesar que acepte dos parámetros: un número y una función de callback. La función procesar debe invocar la función de callback, pasando el número como parámetro.*/
+
+
+function procesar(num, fn) {
+    fn(num)
+}
+
+function callback(numero) {
+    console.log(`El numero pasado como argumento es el ${numero}`)
+}
+
+procesar(5, callback)
+
+/* Ejercicio 2
+Callbacks con operaciones matemáticas: Escribe una función calculadora que acepte tres parámetros: dos números y una función de callback. La función calculadora debe invocar la función de callback con los dos números como parámetros. Luego, llama calculadora con una función que realice la suma de los dos números.*/
+
+
+function calculadora(num1, num2, fn) {
+    fn(num1, num2)
+}
+
+function suma(a, b) {
+    console.log(a + b)
+}
+
+calculadora(14, 8, suma)
+calculadora(10, 5, suma)
+
+// Nivel 2
+/* Ejercicio 3
+Uso de callbacks en funciones asíncronas: Escribe una función esperarISaludar que acepte dos parámetros: un nombre y una función de callback. La función debe esperar 2 segundos y entonces invocar la función de callback, pasando el nombre como parámetro.*/
+
+/* Ejercicio 4
+Callbacks con arrays: Escribe una función procesarElements que acepte dos parámetros: un array y una función de callback. La función procesarElements debe invocar la función de callback por cada elemento del array.*/
+
+
+
+// Nivel 3
+/* Ejercicio 5
+Escribe una función procesarCadena que acepte dos parámetros: una cadena de caracteres y una función de callback. La función procesarCadena debe convertir la cadena a mayúsculas y entonces invocar la función de callback con la cadena transformada.*/
