@@ -80,21 +80,51 @@ console.log(puedeConducir(20));
 Uso con operadores de comparación: Escribe una expresión que utilice el operador ternario para determinar cuál de los dos números dados (num1 y num2) es mayor, devuelve 'num1 es mayor' Si no, devuelve '. num2 es mayor'.*/
 
 const comparacionNumeros = (num1, num2) => {
-    return  num1 === num2
+  return num1 === num2
     ? "num1 y num2 son iguales"
     : num1 > num2
     ? "num1 es mayor"
     : "num2 es mayor";
 };
-console.log(comparacionNumeros(1,2))
-console.log(comparacionNumeros(10,2))
-console.log(comparacionNumeros(100,100))
+console.log(comparacionNumeros(1, 2));
+console.log(comparacionNumeros(10, 2));
+console.log(comparacionNumeros(100, 100));
 
 // Nivel 2
 /* Ejercicio 3
-Uso enlazado de operadores ternarios: Escribe una expresión que utilice enlaces de operadores ternarios para determinar si un número es positivo, negativo o cero.
+Uso enlazado de operadores ternarios: Escribe una expresión que utilice enlaces de operadores ternarios para determinar si un número es positivo, negativo o cero.*/
 
-Operador ternario con funciones: Crea una función encontrarMaximo que acepte tres parámetros (a, b, c) y utilice el operador ternario para determinar el valor máximo.*/
+const positivoNegativoOCero = (num) => {
+  return num === 0
+    ? "El número es cero"
+    : num > 0
+    ? "El número es positivo"
+    : "El número es negativo";
+};
+
+console.log(positivoNegativoOCero(0));
+console.log(positivoNegativoOCero(0.3));
+console.log(positivoNegativoOCero(-0.3));
+console.log(positivoNegativoOCero(10));
+console.log(positivoNegativoOCero(-5));
+
+/*Operador ternario con funciones: Crea una función encontrarMaximo que acepte tres parámetros (a, b, c) y utilice el operador ternario para determinar el valor máximo.*/
+
+const encontrarMaximo = (a, b, c) => {
+  return a > b
+    ? a > c
+      ? `El valor maximo es ${a}`
+      : `El valor maximo es ${c}`
+    : b > c
+    ? `El valor maximo es ${b}`
+    : `El valor maximo es ${c}`;
+};
+
+console.log(encontrarMaximo(1,2,3))
+console.log(encontrarMaximo(3,2,1))
+console.log(encontrarMaximo(1,3,2))
+console.log(encontrarMaximo(10,10,10))
+console.log(encontrarMaximo(-10,-6,-4))
 
 // Nivel 3
 /* Ejercicio 4
