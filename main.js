@@ -351,3 +351,35 @@ const everySome = [11, 12, 13, 14];
 
 console.log(everySome.some(mayor10));
 console.log(everySome.every(mayor10));
+
+console.log("---------- Ejercicio 1.6: Array loops------------");
+// Nivel 1
+/* Ejercicio 1
+forEach: Tiene un array de nombres. Utiliza forEach para imprimir cada nombre en la consola: let nombres = ['Anna', 'Bernat', 'Clara'];*/
+console.log("Ejercicio 1----------");
+let nombres = ["Anna", "Bernat", "Clara"];
+nombres.forEach((item) => console.log(item));
+
+/* Ejercicio 2
+for-of: Tiene un array de nombres. Utiliza un bucle for-of para imprimir cada nombre en la consola: let noms = ['Anna', 'Bernat', 'Clara'];*/
+console.log("Ejercicio 2----------");
+for (let item of nombres) {
+  console.log(item);
+}
+
+/* Ejercicio 3
+filtro: Tiene un array de números. Use filtro para crear una nueva array que sólo contenga los números pares. let numeros = [1, 2, 3, 4, 5, 6];*/
+console.log("Ejercicio 3----------");
+let numeros = [1, 2, 3, 4, 5, 6];
+
+console.log(numeros.filter((item) => item % 2 === 0));
+// Nivel 2
+/* Ejercicio 4
+for-in: Tiene un objeto con pares clave-valor: let obj = { nombre: Ola, edad: 25, ciudad: 'Barcelona' }; Utiliza un bucle for-in para imprimir en la consola cada clave y su correspondiente valor.*/
+
+/* Ejercicio 5
+for-of con break: Tiene un array de números. Utiliza un bucle for-of para imprimir en la consola los números hasta encontrar el número 5, entonces detiene el bucle: let numeros = [1, 2, 3, 4, 5, 6];*/
+
+// Nivel 3
+/*Ejercicio 6
+for-of con index: Utiliza un bucle for-of para imprimir en la consola cada elemento del array y su posición (index): let noms = ['Anna', 'Bernat', 'Clara']*/
