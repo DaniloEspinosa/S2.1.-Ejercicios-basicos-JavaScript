@@ -249,8 +249,31 @@ console.log(suma2(...arrayNumeros));
 /* Ejercicio 3
 Copiando objetos con Spread: Crea un objeto 'objeto1'. Después crea un segundo objeto, 'objeto2', que sea una copia de 'objeto1' utilizando el operador spread. ha cambiado.*/
 
+const objeto1 = { nombre: "Lionel", apellido: "Messi", posicion: 10 };
+const objeto2 = { ...objeto1 };
+
+console.log("Este es el objeto1");
+console.log(objeto1);
+console.log("Este es el objeto2 creado con operador spread");
+console.log(objeto2);
+
 /* Ejercicio 4
 Resto en Destructuring: Crea un array con varios elementos. Utiliza destructuring y el operador resto para asignar los primeros dos elementos a variables, y después asignar el resto de los elementos a una tercera variable.*/
+
+const arrayVariosElementos = [
+  "Crea",
+  "un",
+  "array",
+  "con",
+  "varios",
+  "elementos",
+];
+
+const [valor1, valor2, ...restoElementos] = arrayVariosElementos;
+
+console.log(valor1);
+console.log(valor2);
+console.log(restoElementos);
 
 // Nivel 3
 /* Ejercicio 5
