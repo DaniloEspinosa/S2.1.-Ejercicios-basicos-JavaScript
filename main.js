@@ -244,10 +244,10 @@ console.log(suma2(...arrayNumeros));
 
 // Nivel 2
 /* Ejercicio 3
-Copiando objetos con Spread: Crea un objeto 'objeto1'. Después crea un segundo objeto, 'objeto2', que sea una copia de 'objeto1' utilizando el operador spread. ha cambiado.*/
+Copiando objetos con Spread: Crea un objeto 'objeto1'. Después crea un segundo objeto, 'objeto2', que sea una copia de 'objeto1' utilizando el operador spread. Cambia una propiedad de 'objeto2' y comprueba que 'objeto1' no ha cambiado..*/
 
 const objeto1 = { nombre: "Lionel", apellido: "Messi", posicion: 10 };
-const objeto2 = { ...objeto1 };
+const objeto2 = { ...objeto1, posicion : 30 };
 
 console.log("Este es el objeto1");
 console.log(objeto1);
@@ -376,6 +376,11 @@ console.log(numeros.filter((item) => item % 2 === 0));
 // Nivel 2
 /* Ejercicio 4
 for-in: Tiene un objeto con pares clave-valor: let obj = { nombre: Ola, edad: 25, ciudad: 'Barcelona' }; Utiliza un bucle for-in para imprimir en la consola cada clave y su correspondiente valor.*/
+console.log("Ejercicio 4----------");
+let objForIn = { nombre: "Ola", edad: 25, ciudad: 'Barcelona' }
+for (let propiedad in objForIn) {
+  console.log(`${propiedad} : ${objForIn[propiedad]}`)
+}
 
 /* Ejercicio 5
 for-of con break: Tiene un array de números. Utiliza un bucle for-of para imprimir en la consola los números hasta encontrar el número 5, entonces detiene el bucle: let numeros = [1, 2, 3, 4, 5, 6];*/
