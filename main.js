@@ -189,7 +189,7 @@ Callbacks con arrays: Escribe una función procesarElements que acepte dos pará
 
 const arrayElementos = ["Hola", "como", "estas"];
 
-const procesarForEach = (array, callback) => {
+const procesarElements = (array, callback) => {
   array.forEach((item) => {
     callback(item);
   });
@@ -205,10 +205,21 @@ function elementos(elemento) {
   console.log(elemento);
 }
 console.log("Resuelto con forEach");
-procesarForEach(arrayElementos, elementos);
+procesarElements(arrayElementos, elementos);
 console.log("Resuelto con for");
 procesarFor(arrayElementos, elementos);
 
 // Nivel 3
 /* Ejercicio 5
 Escribe una función procesarCadena que acepte dos parámetros: una cadena de caracteres y una función de callback. La función procesarCadena debe convertir la cadena a mayúsculas y entonces invocar la función de callback con la cadena transformada.*/
+
+function procesarCadena(cadena, callback) {
+    let nuevaCadena = cadena.toUpperCase()
+    callback(nuevaCadena)
+}
+
+function imprimirCadena(cadena){
+    console.log(cadena)
+}
+
+procesarCadena("Hola mundo", imprimirCadena)
