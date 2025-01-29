@@ -344,3 +344,10 @@ console.log(resultado);
 // Nivel 3
 /* Ejercicio 6
 Every / Some: Usa every y some para determinar si todos o algunos de los elementos del array [11, 12, 13, 14] son ​​mayores que 10, respectivamente*/
+
+const mayor10 = (value) => value > 10;
+
+const everySome = [11, 12, 13, 14];
+
+console.log(everySome.some(mayor10));
+console.log(everySome.every(mayor10));
