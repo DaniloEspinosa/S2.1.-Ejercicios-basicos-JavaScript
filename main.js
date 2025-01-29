@@ -279,5 +279,24 @@ console.log(restoElementos);
 /* Ejercicio 5
 Spread en Funciones: Crea una función que acepte tres argumentos. Después, crea un array con tres elementos y llama a la función utilizando el operador spread con esa array.*/
 
+function spreadEnFunciones(arg1, arg2, arg3) {
+  console.log(`${arg1} ${arg2} ${arg3}`);
+}
+
+const array3Elementos = ["Soy", "un", "array"];
+
+spreadEnFunciones(...array3Elementos);
+
 /* Ejercicio 6
 Fusionando Objetos con Spread: Crea dos objetos con propiedades distintas. Utiliza el operador spread para fusionar estos dos objetos en uno nuevo.*/
+
+const objeto1Fusion = {
+  marca: "Seat",
+  puertas: 4,
+  tipo: "familiar",
+  extras: ["llantas", "gps", "seguro"],
+};
+const objeto2Fusion = { combustible: "gasoil", nuevo: true, precio: 20000 };
+const objetoFusionado = { ...objeto1Fusion, ...objeto2Fusion };
+
+console.log(objetoFusionado);
