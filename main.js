@@ -1,4 +1,4 @@
-console.log("---------- Ejercicio 1.1: Arrow functions------------")
+console.log("---------- Ejercicio 1.1: Arrow functions------------");
 // Nivel 1
 /* Ejercicio 1
 Conversión de funciones: Tienes una función add que acepta dos parámetros y devuelve su suma. Conviértela en una función de flecha. Por ejemplo:function add(a, b) {return a + b;}.*/
@@ -53,15 +53,13 @@ Función de flecha con 'setTimeout': Crea una función de flecha que imprima un 
 
 const despuesDe3Segundos = () => {
   setTimeout(() => {
-    console.log(
-      "Soy el ejercicio 1.1, nivel 3 y ya han pasado los 3 segundos"
-    );
+    console.log("Soy el ejercicio 1.1, nivel 3 y ya han pasado los 3 segundos");
   }, 3000);
 };
 
 despuesDe3Segundos();
 
-console.log("---------- Ejercicio 1.2: Operador ternario------------")
+console.log("---------- Ejercicio 1.2: Operador ternario------------");
 // Nivel 1
 /*Ejercicio 1
 Operador ternario básico: Escribe una función puedeConducir que acepte la edad como parámetro y utilice el operador ternario para determinar si el usuario puede conducir. Si la edad es 18 o más, debe devolver 'Puedes conducir'. Si no, debe devolver 'No puedes conducir'.*/
@@ -136,8 +134,7 @@ const parOImpar = (array) => {
 };
 parOImpar(arrayNumeros);
 
-
-console.log("---------- Ejercicio 1.3: Callbacks------------")
+console.log("---------- Ejercicio 1.3: Callbacks------------");
 // Nivel 1
 /* Ejercicio 1
 Callback básico: Escribe una función llamada procesar que acepte dos parámetros: un número y una función de callback. La función procesar debe invocar la función de callback, pasando el número como parámetro.*/
@@ -177,7 +174,9 @@ const esperarISaludar = (nombre, callback) => {
 };
 
 function saludo(name) {
-  console.log(`Soy el ejercicio 1.3, nivel 2 y ya han pasado los 2 segundos, hola ${name}`);
+  console.log(
+    `Soy el ejercicio 1.3, nivel 2 y ya han pasado los 2 segundos, hola ${name}`
+  );
 }
 
 esperarISaludar("Raul", saludo);
@@ -222,7 +221,7 @@ function imprimirCadena(cadena) {
 
 procesarCadena("Hola mundo", imprimirCadena);
 
-console.log("---------- Ejercicio 1.4: Rest & Spread operators------------")
+console.log("---------- Ejercicio 1.4: Rest & Spread operators------------");
 // Nivel 1
 /* Ejercicio 1
 Operador Spread en Arrays: Crea dos arrays, array1 y array2. Use el operador spread para crear una tercera array que contenga todos los elementos de array1 y array2.*/
@@ -299,45 +298,48 @@ const objetoFusionado = { ...objeto1Fusion, ...objeto2Fusion };
 
 console.log(objetoFusionado);
 
-
-console.log("---------- Ejercicio 1.5: Array transformations------------")
+console.log("---------- Ejercicio 1.5: Array transformations------------");
 // Nivel 1
 /* Ejercicio 1
 Map: Tiene un array de números [1, 2, 3, 4]. Crea un nuevo array que contenga el cuadrado de cada número.*/
 
-const arrayNumeros2 = [1, 2, 3, 4]
-const newArrayMap = arrayNumeros2.map((item) => item ** 2)
-console.log(newArrayMap)
+const arrayNumeros2 = [1, 2, 3, 4];
+const newArrayMap = arrayNumeros2.map((item) => item ** 2);
+console.log(newArrayMap);
 
 /* Ejercicio 2
 Filtero: Tiene un array de números [1, 2, 3, 4]. Crea un nuevo array que sólo contenga los números pares.*/
 
-const newArrayFilter = arrayNumeros2.filter((item) => item % 2 == 0)
-console.log(newArrayFilter)
+const newArrayFilter = arrayNumeros2.filter((item) => item % 2 == 0);
+console.log(newArrayFilter);
 
 /* Ejercicio 3
 Find: Tiene un array de números [1, 10 , 8, 11]. Use la función find para encontrar el primer número que es mayor a 10.*/
 
-const primerMayor10 = [1, 10 , 8, 11].find((num) => num > 10)
-console.log(primerMayor10)
+const primerMayor10 = [1, 10, 8, 11].find((num) => num > 10);
+console.log(primerMayor10);
 
 /* Ejercicio 4
 Reducción: Tiene un array de números [13, 7, 8, 21]. Utiliza la función reduccion para calcular la suma total de los números.*/
 
-const sumaTotal = [13, 7, 8, 21].reduce((acc, num) => acc + num , 0)
-console.log(sumaTotal)
+const sumaTotal = [13, 7, 8, 21].reduce((acc, num) => acc + num, 0);
+console.log(sumaTotal);
 
 // Nivel 2
 /* Ejercicio 5
 Dado un array "[ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9 ]", crea una función en una sola línea que haga lo siguiente:
 
 - Filtra los números mayores o iguales a 10.
-
 - Multiplica cada número filtrado por 2.
-
 - Calcula la suma de los números filtrados y multiplicados por 2.
-
 - La función debe devolver el resultado de la suma.*/
+
+const arrayNivel2 = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
+const resultado = arrayNivel2
+  .filter((num) => num >= 10)
+  .map((num) => num * 2)
+  .reduce((acc, num) => acc + num, 0);
+console.log(resultado);
 
 // Nivel 3
 /* Ejercicio 6
