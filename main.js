@@ -214,12 +214,47 @@ procesarFor(arrayElementos, elementos);
 Escribe una función procesarCadena que acepte dos parámetros: una cadena de caracteres y una función de callback. La función procesarCadena debe convertir la cadena a mayúsculas y entonces invocar la función de callback con la cadena transformada.*/
 
 function procesarCadena(cadena, callback) {
-    let nuevaCadena = cadena.toUpperCase()
-    callback(nuevaCadena)
+  let nuevaCadena = cadena.toUpperCase();
+  callback(nuevaCadena);
 }
 
-function imprimirCadena(cadena){
-    console.log(cadena)
+function imprimirCadena(cadena) {
+  console.log(cadena);
 }
 
-procesarCadena("Hola mundo", imprimirCadena)
+procesarCadena("Hola mundo", imprimirCadena);
+
+// ---------- Ejercicio 1.4: Rest & Spread operators --------------------------------------------------
+// Nivel 1
+/* Ejercicio 1
+Operador Spread en Arrays: Crea dos arrays, array1 y array2. Use el operador spread para crear una tercera array que contenga todos los elementos de array1 y array2.*/
+
+const array1 = ["este", "es", "el", "primer", "array"];
+const array2 = ["y", "este", "es", "el", "segundo"];
+
+const arrayFusionado = [...array1, ...array2];
+
+console.log(arrayFusionado);
+
+/* Ejercicio 2
+Operador Rest en Funciones: Crea una función 'suma' que utilice el operador rest para aceptar un número indeterminado de argumentos y devolver su suma.*/
+
+const suma2 = (...argumentos) =>
+  argumentos.reduce((acc, elem) => acc + elem, 0);
+
+console.log(suma2(1, 2, 3, 4));
+console.log(suma2(...arrayNumeros));
+
+// Nivel 2
+/* Ejercicio 3
+Copiando objetos con Spread: Crea un objeto 'objeto1'. Después crea un segundo objeto, 'objeto2', que sea una copia de 'objeto1' utilizando el operador spread. ha cambiado.*/
+
+/* Ejercicio 4
+Resto en Destructuring: Crea un array con varios elementos. Utiliza destructuring y el operador resto para asignar los primeros dos elementos a variables, y después asignar el resto de los elementos a una tercera variable.*/
+
+// Nivel 3
+/* Ejercicio 5
+Spread en Funciones: Crea una función que acepte tres argumentos. Después, crea un array con tres elementos y llama a la función utilizando el operador spread con esa array.*/
+
+/* Ejercicio 6
+Fusionando Objetos con Spread: Crea dos objetos con propiedades distintas. Utiliza el operador spread para fusionar estos dos objetos en uno nuevo.*/
