@@ -480,3 +480,12 @@ asincrona2();
 /* Ejercicio 6
 Promise.all: Crea dos promesas que se resuelvan después de 2 y 3 segundos, respectivamente. Use Promise.all para esperar que ambas promesas se resuelvan, e imprime los resultados en la consola.*/
 
+const promesa3 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 2000, "Ejercicio 6------------ en 2 segundos");
+});
+
+const promesa4 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 3000, "Ejercicio 6------------ en 3 segundos");
+});
+
+Promise.all([promesa3, promesa4]).then((values) => console.log(values));
