@@ -406,17 +406,15 @@ Creación de una Promesa: Crea una promesa que se resuelva después de 2 segundo
 console.log("Ejercicio 1----------");
 console.log("Promesa creada");
 
-function promesa() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Hola mundo");
-    }, 2000);
-  });
-}
+const promesa = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Hola mundo");
+  }, 2000);
+});
 
 /* Ejercicio 2
 Utilización de una Promesa: Utiliza la promesa creada en el ejercicio anterior. Crea un .then que imprima el resultado en la consola.*/
-promesa().then((response) =>
+promesa.then((response) =>
   console.log(
     `Ejercicio 1.7 -> Ejercicio 2----------
    ${response} -------`
@@ -432,10 +430,10 @@ function promesa2() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (input === "Hola")
-        resolve("Ejercicio 1.7 -> Ejercicio 2---------- El input es 'Hola'");
+        resolve("Ejercicio 1.7 -> Ejercicio 3---------- El input es 'Hola'");
       else
         reject(
-          "Ejercicio 1.7 -> Ejercicio 2---------- Ahora el input no es 'Hola'"
+          "Ejercicio 1.7 -> Ejercicio 3---------- Ahora el input no es 'Hola'"
         );
     }, 2000);
   });
@@ -445,7 +443,7 @@ promesa2()
   .then((response) => console.log(response))
   .catch((error) => console.log(error));
 
-// input = "cualquier otra cosa";
+input = "cualquier otra cosa";
 
 promesa2()
   .then((response) => console.log(response))
@@ -455,7 +453,7 @@ promesa2()
 Uso de async/await: Escribe una función asíncrona que utilice la función await para esperar el resultado de la promesa creada en el ejercicio 1, y que después imprima este resultado en la consola.*/
 
 async function asincrona() {
-  const response = await promesa();
+  const response = await promesa;
   console.log("Ejercicio 4----------");
   console.log(response);
 }
@@ -466,6 +464,19 @@ asincrona();
 /* Ejercicio 5
 Gestión de errores con async/await: Modifica la función del ejercicio 4 para que capture cualquier posible error utilizando un blog try/catch.*/
 
+async function asincrona2() {
+  try {
+    const response = await promesa22();
+    console.log("Ejercicio 5----------");
+    console.log(response);
+  } catch (error) {
+    console.log("Ejercicio 5----------", error);
+  }
+}
+
+asincrona2();
+
 // Nivel 3
 /* Ejercicio 6
 Promise.all: Crea dos promesas que se resuelvan después de 2 y 3 segundos, respectivamente. Use Promise.all para esperar que ambas promesas se resuelvan, e imprime los resultados en la consola.*/
+
